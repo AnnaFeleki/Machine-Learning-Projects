@@ -34,3 +34,31 @@ You can install these dependencies using `pip`:
 
 ```bash
 pip install numpy pandas matplotlib tensorflow keras
+```
+
+## Setup
+1. Clone this repository to your local machine:
+```bash
+git clone https://github.com/yourusername/mnist-classification.git
+```
+2. Navigate to the project directory:
+```bash
+cd mnist-classification
+```
+
+## Usage
+Load the MNIST dataset, preprocess the data (normalize the images and convert labels to categorical format).
+Build the neural network model using Keras:
+Flatten the input images
+Add a dense hidden layer with 128 units and ReLU activation
+Add a softmax output layer with 10 units (for the 10 possible digit classes)
+Compile the model with Adam optimizer and categorical cross-entropy loss function.
+Train the model for 10 epochs and validate the model using a validation split of 20%.
+Evaluate the trained model on the test set and print the test accuracy.
+Save the trained model as mnist_model.h5.
+Plot training and validation accuracy over epochs.
+
+Run the script with:
+```bash
+python main.py
+```
