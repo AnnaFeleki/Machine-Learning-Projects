@@ -21,11 +21,3 @@ This project demonstrates the application of **K-Means clustering** on the class
   - First two features are plotted with cluster assignments and centers
 
 ---
-
-## 🚀 How to Run
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/iris-kmeans-clustering.git
-cd iris-kmeans-clustering
