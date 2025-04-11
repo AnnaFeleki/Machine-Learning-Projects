@@ -1,44 +1,60 @@
-# 🏠 Boston Housing Price Prediction using Linear Regression
+# 🏠 Boston Housing Price Prediction
 
-This project applies a **Linear Regression** model to the **Boston Housing Dataset** to predict median house values based on various socioeconomic and housing-related features.
+This project uses **Linear Regression** to predict housing prices in Boston using the `load_boston` dataset from `sklearn.datasets`. The goal is to demonstrate a full regression pipeline including preprocessing, training, evaluation, and visualization.
 
 ---
 
 ## 📊 Dataset
 
-- **Source:** [Selva86 GitHub Datasets](https://github.com/selva86/datasets/blob/master/BostonHousing.csv)
-- **Target Variable:** `medv` (Median value of owner-occupied homes)
-- **Features Include:**
-  - Crime rate, proportion of non-retail business acres, nitric oxide concentration, average rooms, etc.
+The [Boston Housing dataset](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_boston.html) contains information collected by the U.S. Census Service concerning housing in the area of Boston, Massachusetts. It includes 506 rows with 13 numerical features such as:
+
+- CRIM: Crime rate by town
+- RM: Average number of rooms per dwelling
+- LSTAT: % lower status of the population
+- ... and more
+
+> ⚠️ **Note**: The Boston Housing dataset is deprecated in newer versions of `scikit-learn` due to ethical concerns. It is used here only for educational purposes.
 
 ---
 
-## 🔧 Tools & Libraries
+## 🧠 Model
 
-- Python 3
-- `pandas`, `numpy`, `scikit-learn`
-- `matplotlib` for visualization
+- **Model**: Linear Regression
+- **Library**: `sklearn.linear_model.LinearRegression`
+- **Preprocessing**: StandardScaler normalization of features
 
 ---
 
-## 🚀 How it Works
+## 🔧 Pipeline
 
-1. **Load & Explore Data**  
-   Read the dataset from a URL and explore its structure.
-
-2. **Preprocessing**  
-   - Separate features (`X`) and target (`y`)
-   - Train/test split (80/20)
-   - Feature scaling using `StandardScaler`
-
-3. **Model Training**  
-   Fit a `LinearRegression` model on the training data.
-
-4. **Evaluation Metrics**
+1. Load dataset from `sklearn.datasets.load_boston`
+2. Convert to `pandas.DataFrame` for exploration
+3. Preprocess: standardize features using `StandardScaler`
+4. Train/test split (80/20)
+5. Train Linear Regression model
+6. Predict and evaluate performance using:
    - Mean Squared Error (MSE)
-   - R² Score
-
-5. **Visualization**  
-   A scatter plot comparing actual vs. predicted house prices.
+   - R² Score (Coefficient of Determination)
+7. Visualize predicted vs. actual house prices
 
 ---
+
+## 📈 Results
+
+The model's performance is evaluated with both MSE and R² on training and test sets. The result plot shows how close the predicted values are to the actual prices.
+
+<p align="center">
+  <img src="assets/boston_prices_plot.png" alt="Actual vs Predicted Plot" width="600"/>
+</p>
+
+---
+
+## 📦 Requirements
+
+- Python 3.x
+- pandas
+- numpy
+- scikit-learn
+- matplotlib
+
+
