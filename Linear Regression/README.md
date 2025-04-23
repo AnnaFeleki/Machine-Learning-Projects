@@ -43,9 +43,6 @@ The [Boston Housing dataset](https://scikit-learn.org/stable/modules/generated/s
 
 The model's performance is evaluated with both MSE and R² on training and test sets. The result plot shows how close the predicted values are to the actual prices.
 
-<p align="center">
-  <img src="assets/boston_prices_plot.png" alt="Actual vs Predicted Plot" width="600"/>
-</p>
 
 ---
 
