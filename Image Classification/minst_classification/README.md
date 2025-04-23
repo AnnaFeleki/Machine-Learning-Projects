@@ -2,15 +2,6 @@
 
 This repository contains a simple machine learning model for classifying handwritten digits from the MNIST dataset using a neural network built with TensorFlow/Keras.
 
-## Table of Contents
-
-- [Overview](#overview)
-- [Requirements](#requirements)
-- [Setup](#setup)
-- [Usage](#usage)
-- [Results](#results)
-- [License](#license)
-
 ## Overview
 
 This project demonstrates how to classify images of handwritten digits from the MNIST dataset using a simple neural network. The model is built using Keras with TensorFlow as the backend.
