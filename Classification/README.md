@@ -23,10 +23,3 @@ This project demonstrates how to use a **Random Forest Classifier** to predict s
 
 ---
 
-## 🚀 How to Run
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/titanic-rf-predictor.git
-cd titanic-rf-predictor
