@@ -1,41 +1,36 @@
-# 📽️ User-Based Recommender System (Pure Pandas + Cosine Similarity)
+# 📽️ User-Based Recommender System (Pandas + Cosine Similarity)
 
-This project implements a **simple user-based collaborative filtering recommender system** using only `pandas` and `scikit-learn`'s `cosine_similarity` — no specialized libraries like `Surprise`.
+This project implements a lightweight and explainable **user-based collaborative filtering recommender system** using only `pandas` and `scikit-learn`.
+
+> It predicts movie preferences for users by analyzing the rating patterns of similar users.
+
+---
 
 ## 🚀 Features
 
-- Pure Python + Pandas
-- User-user similarity with Cosine Similarity
-- Predicts unseen item ratings
-- Lightweight and explainable
-- Ideal as a base for more advanced collaborative filtering
+- ✅ Pure Python implementation (no `Surprise`, `LightFM`, or `implicit`)
+- ✅ Cosine similarity on **normalized (centered) user-item matrix**
+- ✅ Fallback to **popular items** when no strong neighbors exist
+- ✅ Human-readable recommendation output
+- ✅ Clear similarity and interaction **heatmaps**
+- ✅ Ideal for learning, demos, and prototyping
 
-## 🛠️ Libraries Used
+---
 
-- pandas
-- scikit-learn (for cosine similarity)
+## 🧾 Sample Dataset
 
-## 📊 Example Dataset
-
-A small sample dataset of movie ratings from users:
-
+```plaintext
 | user_id | item     | rating |
 |---------|----------|--------|
 | 1       | Movie A  | 5      |
 | 1       | Movie B  | 3      |
+| 1       | Movie C  | 4      |
 | 2       | Movie A  | 4      |
-| ...     | ...      | ...    |
+| 2       | Movie C  | 2      |
+| 3       | Movie B  | 5      |
+| 3       | Movie D  | 3      |
+| 4       | Movie A  | 2      |
+```
+## 🧾 User Similary Heatmap
 
-## 📈 Recommendation Logic
-
-1. Build a user-item rating matrix.
-2. Compute cosine similarity between all users.
-3. For a given user:
-   - Find similar users.
-   - Aggregate their ratings for items the user hasn’t rated.
-   - Recommend the top `N` items.
-
-## ▶️ Usage
-
-```python
-recommend_items(user_id=4)
+![User Similarity Heatmap](similarity_heatmap.png)
