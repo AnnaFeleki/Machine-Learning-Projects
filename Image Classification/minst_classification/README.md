@@ -30,7 +30,7 @@ pip install numpy pandas matplotlib tensorflow keras
 ## Setup
 Clone this repository to your local machine:
 ```bash
-git clone https://github.com/yourusername/mnist-classification.git
+git clone [https://github.com/yourusername/mnist-classification.git](https://github.com/AnnaFeleki/Machine-Learning-Projects/tree/main/Image%20Classification/minst_classification)
 ```
 
 
